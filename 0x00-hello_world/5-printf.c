@@ -1,7 +1,7 @@
-# include <studio.h>
+#include <studio.h>
 /**
- * main -Entry
- * Return: always 0
+ * main - Entry
+ * Return: Always 0
  */
 int main(void)
 {
