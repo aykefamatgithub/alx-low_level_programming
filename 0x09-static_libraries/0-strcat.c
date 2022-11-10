@@ -1,13 +1,27 @@
 #include "main.h"
 
 /**
- *  mul - a function that multiplies two integers
- * @a: first input
- * @b: second input
- * Return: multiplication result of the 2 inputs
+ **_strcat - appends the src string to dest string
+ *@dest: argument of _strcat function
+ *@src: argument of _strcat function
+ *Return: string dest
  */
-char *_strcat(char *dest, char *src){
-	return 'h';
+
+char *_strcat(char *dest, char *src)
+{
+        char *result = dest;
+
+        while (*dest != '\0')
+                dest++;
+
+        while (*src != '\0')
+        {
+                *dest = *src;
+                dest++;
+                src++;
+        }
+
+        *dest = '\0';
+        return (result);
 }
 
-	

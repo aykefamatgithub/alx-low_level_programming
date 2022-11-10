@@ -1,12 +1,21 @@
 #include "main.h"
 
 /**
- *  mul - a function that multiplies two integers
- * @a: first input
- * @b: second input
- * Return: multiplication result of the 2 inputs
+ *_strlen - return the length of string
+ *@s: string as parameter
+ *Return: length of string
  */
-int _strlen(char *s){
-	return (0);
-} 
+
+int _strlen(char *s)
+{
+        int length = 0;
+
+        while (*s != '\0')
+        {
+                length++;
+                s++;
+        }
+
+        return (length);
+}
 

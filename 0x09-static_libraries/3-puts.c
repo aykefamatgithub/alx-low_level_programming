@@ -1,11 +1,17 @@
 #include "main.h"
 
 /**
- *  mul - a function that multiplies two integers
- * @a: first input
- * @b: second input
- * Return: multiplication result of the 2 inputs
+ *_puts - print string
+ *@str: string str
+ *Return: void
  */
-void _puts(char *s){
+void _puts(char *str)
+{
+        while (*str != '\0')
+        {
+                _putchar(*str++);
+
+        }
+        _putchar('\n');
 }
 

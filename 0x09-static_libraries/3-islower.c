@@ -1,12 +1,21 @@
 #include "main.h"
 
 /**
- *  mul - a function that multiplies two integers
- * @a: first input
- * @b: second input
- * Return: multiplication result of the 2 inputs
+ *_islower - check either lower character or other
+ *@c: checking character
+ *Return: int type 0 or 1
  */
+
 int _islower(int c)
 {
-	return (0);
+        if (c >= 'a' && c <= 'z')
+        {
+                return (1);
+        }
+        else
+        {
+                return (0);
+        }
+        _putchar('\n');
 }
+

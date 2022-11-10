@@ -1,12 +1,32 @@
 #include "main.h"
 
 /**
- *  mul - a function that multiplies two integers
- * @a: first input
- * @b: second input
- * Return: multiplication result of the 2 inputs
+ *_strspn - get the lenght of prefix substring
+ *@s: string to search
+ * @accept: target matches
+ * Return: number of bytes consecutively matched
  */
-unsigned int _strspn(char *s, char *accept){
-	return (0);
+
+unsigned int _strspn(char *s, char *accept)
+{
+        int i = 0, j;
+        int matches = 0;
+
+        while (s[j] != '\0')
+        {
+                for (j = 0; accept[j] != '\0'; j++)
+                {
+
+                        if (s[i] == accept[j])
+                        {
+                                matches++;
+                                break;
+                        }
+                        if (accept[j + 1] == '\0' && s[i] != accept[j])
+                        return (matches);
+                }
+                i++;
+        }
+        return (matches);
 }
 

@@ -1,12 +1,25 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- *  mul - a function that multiplies two integers
- * @a: first input
- * @b: second input
- * Return: multiplication result of the 2 inputs
+ **_strchr - locates chracter instring
+ *@s: pointer to character
+ *@c:character type variable
+ *Return: the first occurance of charcter
  */
-char *_strchr(char *s, char c){
-	return 'd';
-}
 
+char *_strchr(char *s, char c)
+{
+        int k;
+
+        k = 0;
+        while (s[k] != '\0' && s[k] != c)
+                k++;
+
+        if (s[k] == c)
+                return (&s[k]);
+                /* k++;*/
+        else
+
+        return (NULL);
+}

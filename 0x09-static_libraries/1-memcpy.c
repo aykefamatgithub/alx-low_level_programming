@@ -1,12 +1,29 @@
 #include "main.h"
 
 /**
- *  mul - a function that multiplies two integers
- * @a: first input
- * @b: second input
- * Return: multiplication result of the 2 inputs
+ **_memcpy - copy memory area
+ *@dest: pointer to charcter variable as destination
+ *@src: pointer to character varable as source
+ *@n: number of bytes
+ *Return: pointer to dest
  */
-char *_memcpy(char *dest, char *src, unsigned int n){
-	return 'd';
+
+char *_memcpy(char *dest, char *src, unsigned int n)
+{
+        int size = n;
+
+        if (size > 0)
+        {
+                int k;
+
+                k = 0;
+                while (k < size)
+                {
+                        dest[k] = src[k];
+                        k++;
+                }
+        }
+
+        return (dest);
 }
 
