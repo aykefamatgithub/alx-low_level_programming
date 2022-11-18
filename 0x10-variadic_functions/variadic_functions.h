@@ -1,33 +1,23 @@
-#ifndef VARIADIC_FUNCTIONS_H
-#define VARIADIC_FUNCTIONS_H
+#ifndef VARIADIC_FUNCTIONS
+#define VARIADIC_FUNCTIONS
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <string.h>
 #include <stdarg.h>
 
+int _putchar(char c);
+int sum_them_all(const unsigned int n, ...);
+void print_numbers(const char *separator, const unsigned int n, ...);
+void print_strings(const char *separator, const unsigned int n, ...);
+void print_all(const char * const format, ...);
+
 /**
- * struct specs - structure of specifiers and their printf ones
- *
- * @spec: given specifiers
- * @func : printf corresponding function
+ * struct dt - struct
+ * @letter: letter signifying data type
+ * @func: function ptr
  */
-
-typedef struct specs
+typedef struct dt
 {
-	char *spec;
+	char letter;
 	void (*func)(va_list);
-} specs_t;
+} datatype;
 
-int		sum_them_all(const unsigned int n, ...);
-void	print_numbers(const char *separator, const unsigned int n, ...);
-void	print_strings(const char *separator, const unsigned int n, ...);
-void	print_all(const char * const format, ...);
-
-void	print_char(va_list list);
-void	print_int(va_list list);
-void	print_float(va_list list);
-void	print_string(va_list list);
-
-#endif /
+#endif
